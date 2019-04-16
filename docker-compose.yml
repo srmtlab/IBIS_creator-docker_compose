@@ -7,5 +7,16 @@ services:
       dockerfile: ./Dockerfile
     ports:
       - 127.0.0.1:8000:8000
+    links:
+      - redis
+    depends_on:
+      - redis
+    command: "dockerize
+    -wait tcp://redis:6379"
+    restart: unless-stopped
   redis:
     image: redis:5-alpine3.9
+    restart: unless-stopped
+    
+volumes:
+  
