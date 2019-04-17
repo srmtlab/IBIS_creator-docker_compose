@@ -12,11 +12,21 @@ services:
     depends_on:
       - redis
     command: "dockerize
-    -wait tcp://redis:6379"
+    -wait tcp://redis:6379
+    -timeout 60s
+    python3 manage.py collectstatic --settings config.settings.production
+    python3 manage.py migrate --settings config.settings.production
+    python3 manage.py makemigrations IBIS_creator --settings config.settings.production
+    python3 manage.py migrate --settings config.settings.production
+    daphne -p 8000 config.asgi:application
+    "
     restart: unless-stopped
+    volumes:
+      - ibiscreator_db:/opt/IBIS_creator
+      - ./local_settings.json:/opt/IBIS_creator/local_settings.json
   redis:
     image: redis:5-alpine3.9
     restart: unless-stopped
     
 volumes:
-  
+  ibiscreator_db:
