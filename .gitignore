@@ -2,3 +2,7 @@
 .DS_Store
 *~
 *.swp
+
+# Django stuff:
+local_settings.json
+db.sqlite3
