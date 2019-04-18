@@ -11,6 +11,6 @@ RUN wget https://github.com/jwilder/dockerize/releases/download/${DOCKERIZE_VERS
 	&& tar -C /usr/local/bin -xzvf dockerize-alpine-linux-amd64-${DOCKERIZE_VERSION}.tar.gz \
 	&& rm dockerize-alpine-linux-amd64-${DOCKERIZE_VERSION}.tar.gz
 
-COPY local_settings.json /
+COPY ./local_settings.json ${APP_DIR}/local_settings.json
 
 
