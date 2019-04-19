@@ -2,7 +2,7 @@
   "FILENAME": "local_settings.json",
   "SECRET_KEY": "",
   "ALLOWED_HOSTS": [
-    ""
+    "0.0.0.0"
   ],
   "STATIC_ROOT": "/opt/IBIS_creator/static/",
   "LOD": false,
