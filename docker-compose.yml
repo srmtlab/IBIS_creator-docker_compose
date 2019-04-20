@@ -17,7 +17,7 @@ services:
     ./startup.sh"
     restart: unless-stopped
     volumes:
-      - staticdata: /opt/IBIS_creator/static
+      - staticdata:/opt/IBIS_creator/static 
       - ./SECRET_FILES:/opt/IBIS_creator/SECRET_FILES
   redis:
     image: redis:5-alpine3.9
