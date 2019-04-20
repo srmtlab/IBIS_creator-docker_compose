@@ -24,4 +24,5 @@ services:
     restart: unless-stopped
 
 volumes:
-  secretfiles:
+  staticdata:
+  
