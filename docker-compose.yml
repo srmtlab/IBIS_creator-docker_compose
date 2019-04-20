@@ -18,12 +18,10 @@ services:
     restart: unless-stopped
     volumes:
       - staticdata: /opt/IBIS_creator/static
-      - secretfiles: /opt/IBIS_creator/SECRET_FILES
-      - ./local_settings.json:/opt/IBIS_creator/SECRET_FILES/local_settings.json
+      - ./SECRET_FILES:/opt/IBIS_creator/SECRET_FILES
   redis:
     image: redis:5-alpine3.9
     restart: unless-stopped
 
 volumes:
-  staticdata:
   secretfiles:

@@ -4,4 +4,6 @@
 *.swp
 
 # Django stuff:
+*.log
+local_settings.json
 db.sqlite3
