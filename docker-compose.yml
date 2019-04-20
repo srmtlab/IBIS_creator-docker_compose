@@ -14,7 +14,7 @@ services:
     command: "dockerize 
     -wait tcp://redis:6379 
     -timeout 60s 
-    /opt/IBIS_creator/startup.sh"
+    ./startup.sh"
     restart: unless-stopped
     volumes:
       - staticdata: /opt/IBIS_creator/static
