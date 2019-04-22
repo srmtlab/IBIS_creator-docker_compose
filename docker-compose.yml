@@ -5,8 +5,6 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
-    ports:
-      - 127.0.0.1:8000:8000
     links:
       - redis:redis
     depends_on:
@@ -23,13 +21,19 @@ services:
     image: redis:5-alpine3.9
     restart: unless-stopped
   nginx:
-    image: nginx:1.14.2-alpine
     build:
       context: ./nginx
       dockerfile: ./Dockerfile
+    restart: unless-stopped
+    links:
+      - app:ibiscreator
+    depends_on:
+      - app
     volumes:
-      - 
       - staticdata:/static
+      - ./nginx/conf.d:/etc/nginx/conf.d
+    ports:
+      - 127.0.0.1:8000:8000
     
 volumes:
   staticdata:
