@@ -16,12 +16,12 @@ Open `local_settings.json` and modify below variable
 ```
 
 If you publish data in IBIS CREATOR as Linked Open Data, you should set below variable  
-	- LOD : true  
-	- LOD_RESOURCE : IBIS CREATOR concept namespace to append app's element ID (Theme, node, ...)  
-    - LOD_GRAPH_URI : URI to identify RDF graph  
-    - VIRTUOSO_USER : user which has the permission to edit Virtuoso RDF store  
-    - VIRTUOSO_PASSWORD : password for VIRTUOSO_USER  
-    - VIRTUOSO_UPDATE_ENDPOINT : endpoint to renew RDF store  
+- LOD : true  
+- LOD_RESOURCE : IBIS CREATOR concept namespace to append app's element ID (Theme, node, ...)  
+- LOD_GRAPH_URI : URI to identify RDF graph  
+- VIRTUOSO_USER : user which has the permission to edit Virtuoso RDF store  
+- VIRTUOSO_PASSWORD : password for VIRTUOSO_USER  
+- VIRTUOSO_UPDATE_ENDPOINT : endpoint to renew RDF store  
 
 ```bash
 docker-compose up
