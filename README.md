@@ -5,8 +5,7 @@
 # Start
 ```bash
 git clone https://github.com/srmtlab/IBIS_creator-docker_compose.git IBIS_creator
-cd IBIS_creator
-cp  local_settings_template.json  local_settings.json
+cd /opt/SECRET_FILES/IBIS_creator
 ```
 
 Open `local_settings.json` and modify below variable  
