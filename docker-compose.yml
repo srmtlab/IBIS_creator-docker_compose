@@ -22,7 +22,15 @@ services:
   redis:
     image: redis:5-alpine3.9
     restart: unless-stopped
-
+  nginx:
+    image: nginx:1.14.2-alpine
+    build:
+      context: ./nginx
+      dockerfile: ./Dockerfile
+    volumes:
+      - 
+      - staticdata:/static
+    
 volumes:
   staticdata:
   
