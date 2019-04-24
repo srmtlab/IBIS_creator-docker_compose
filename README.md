@@ -22,6 +22,7 @@ If you publish data in IBIS CREATOR as Linked Open Data, you should set below va
 - VIRTUOSO_PASSWORD : password for VIRTUOSO_USER  
 - VIRTUOSO_UPDATE_ENDPOINT : endpoint to renew RDF store  
 
+## run the server
 ```bash
 docker-compose up
 ```
