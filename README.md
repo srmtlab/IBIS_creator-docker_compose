@@ -29,5 +29,5 @@ docker-compose up
 
 # Create an admin user
 ```bash
-docker exec -it container_id python manage.py createsuperuser
+docker exec -it <container_id> python manage.py createsuperuser
 ```
