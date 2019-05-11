@@ -25,6 +25,7 @@ If you publish data in IBIS CREATOR as Linked Open Data, you should set below va
 ```bash
 docker-compose up
 ```
+and access to http://localhost:8000
 
 # Create an admin user
 ```bash
